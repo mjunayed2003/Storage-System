@@ -105,7 +105,7 @@ Google OAuth credentials
 
 Steps
 # Clone repository
-git clone https://github.com/yourusername/jotter-backend.git
+git clone https://github.com/mjunayed2003/jotter-backend.git
 cd jotter-backend
 
 # Install dependencies
