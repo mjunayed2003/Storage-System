@@ -133,7 +133,7 @@ JWT_EXPIRE=7d
 
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
+GOOGLE_CALLBACK_URL=http://localhost:3000/api/auth/google/callback
 
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
@@ -146,102 +146,6 @@ MAX_FILE_SIZE=104857600
 UPLOAD_DIR=./uploads
 
 
-
-
-
-📁 Project Structure
-
-jotter-backend/
-├── src/
-│   ├── app.ts                          # Express app setup & middleware config
-│   ├── index.ts                        # Application entry point
-│   │
-│   ├── Config/                         # Configuration modules
-│   │   ├── corsSetup.ts               # CORS middleware setup
-│   │   ├── googleAuthPassport.ts       # Google OAuth Passport strategy
-│   │   ├── modngoDBconnect.ts          # MongoDB connection setup
-│   │   ├── MulterManyfileWithFolder.ts # Multi-file upload to folders
-│   │   └── MulterProfile.ts            # Profile picture upload config
-│   │
-│   ├── Controller/                     # Business logic & request handlers
-│   │   ├── ErrorHandleController.ts    # Global error handling logic
-│   │   │
-│   │   ├── FileUPMulter/               # File management controllers
-│   │   │   ├── AllFileSearchWithKeyword.ts    # Search all files by keyword
-│   │   │   ├── DateFilterFiles.ts             # Filter files by date range
-│   │   │   ├── DuplicateFile.ts               # Find duplicate files
-│   │   │   ├── favoriteFileSearch.ts          # Search favorite files
-│   │   │   ├── fileDeleteWithID.ts            # Delete file by ID
-│   │   │   ├── getAllFileWithCurrentFolder.ts # Get files in folder
-│   │   │   ├── getFavoriteFile.ts             # Get all favorite files
-│   │   │   ├── getFavoriteWithID.ts           # Get specific favorite
-│   │   │   ├── getFileWithTypeFilter.ts       # Filter files by type
-│   │   │   ├── getRecentFile.ts               # Get recently uploaded files
-│   │   │   ├── ProflePic.ts                   # Profile picture handler
-│   │   │   ├── RenameFileWithId.ts            # Rename file
-│   │   │   ├── SearchWithKeywordANDType.ts    # Combined search & filter
-│   │   │   ├── StorageDetails.ts              # Get storage usage info
-│   │   │   ├── TextFileUpdate.ts              # Update text file content
-│   │   │   ├── textTilteUpdate.ts             # Update text file title
-│   │   │   └── uploadFileWithFolderName.ts    # Upload files to folders
-│   │   │
-│   │   └── FolderMulterControllar/     # Folder management controllers
-│   │       ├── AccountDelete.ts        # Delete user account
-│   │       ├── folderCreator.ts        # Create new folder
-│   │       ├── FolderDeleteWithID.ts   # Delete folder by ID
-│   │       ├── GetAllFolder.ts         # Get all user folders
-│   │       └── GetFolderFileWithName.ts # Get files in named folder
-│   │
-│   ├── Controller/UserControllers/     # User account controllers
-│   │   ├── ChangePassword.ts          # Change password handler
-│   │   ├── changeUserName.ts          # Update username
-│   │   ├── forgotPass.ts              # Forgot password request
-│   │   ├── Islogin.ts                 # Check login status
-│   │   ├── Logout.ts                  # Logout handler
-│   │   ├── NewPassword.ts             # Set new password
-│   │   ├── OTPCheking.ts              # OTP verification
-│   │   ├── resetDb.ts                 # Reset database
-│   │   └── UserController.ts          # Main user controller
-│   │
-│   ├── middlewares/                    # Express middleware functions
-│   │   ├── auth.middleware.ts         # Authentication validation
-│   │   ├── error.middleware.ts        # Error handling middleware
-│   │   └── tokenVerifying.ts          # JWT token verification
-│   │
-│   ├── models/                         # MongoDB Mongoose schemas
-│   │   ├── FileModel.ts               # File document schema
-│   │   ├── FoldersModel.ts            # Folder document schema
-│   │   └── UserModel.ts               # User document schema
-│   │
-│   ├── Routers/                        # Express route definitions
-│   │   ├── filesUpload.ts             # File operation routes
-│   │   ├── folderCreate.ts            # Folder operation routes
-│   │   ├── Router.ts                  # Main/root router
-│   │   └── UserRouter.ts              # User operation routes
-│   │
-│   ├── service/                        # Business logic services
-│   │   ├── cookieGenerator.ts         # Cookie generation utilities
-│   │   ├── EmailerSender.ts           # Email sending service
-│   │   ├── hashTextGeneraton.ts       # Password hashing logic
-│   │   └── tokenGenerator.ts          # JWT token generation
-│   │
-│   ├── shared/                         # Shared utilities & helpers
-│   │   ├── multer/
-│   │   │   └── index.ts               # Multer configuration
-│   │   └── utils/
-│   │       └── response.ts            # API response formatting
-│   │
-│   └── uploads/                        # User file storage
-│       └── junayedm22222@gmail.com/
-│           └── root/                   # Root folder for user files
-│
-├── Jotter-backend.postman_collection.json  # Postman API collection
-├── nodemon.json                            # Nodemon configuration
-├── package.json                            # Project dependencies
-├── package-lock.json                       # Dependency lock file
-├── tsconfig.json                           # TypeScript configuration
-├── README.md                               # Project documentation
-└── .gitignore                              # Git ignore rules
 
 
 
